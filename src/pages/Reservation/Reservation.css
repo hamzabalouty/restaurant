@@ -120,6 +120,28 @@
 
 
 /* Start Rwd */
+@media screen and (max-width: 990px) {
+    .reservation{
+        max-width: 100%;
+    }
+    .reservation-inputs{
+        margin-top: 25px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0px 15px;
+    }
+    .reservation-input{
+        width: 100%;
+        height: 40px;
+        margin-top: 25px;
+        max-width: 0px 10px;
+    }
+
+    .reservation select{
+        padding: 0px 40px;
+    }
+}
 @media screen and (min-width: 768px) and (max-width: 990px) {
     .reservation{
         max-width: 100%;
@@ -155,6 +177,10 @@
     }
     .reservation-title h3{
         font-size: 30px;
+    }
+    .reservation .reservation-btn{
+        width: 90%;
+        margin: 15px 5%;
     }
 }
 /* End Rwd */

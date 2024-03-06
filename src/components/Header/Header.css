@@ -52,6 +52,9 @@
 .header-container-rwd{
     display: none;
 }
+.header-list .active{
+    color: #d1a054;
+}
 
 /* Start Rwd */
 @media screen and (max-width: 990px) {
