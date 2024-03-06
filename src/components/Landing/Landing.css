@@ -1,0 +1,50 @@
+.landing{
+    max-width: 100%;
+    height: 100vh;
+    position: relative;
+    z-index: 0;
+}
+.landing img{
+    width: 100%;
+    height: 100%;
+    z-index: 50;
+}
+.landing-content{
+    z-index: 99;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.landing-content h2,
+.landing-content p{
+    color: #fff;
+}
+.landing-content h2{
+    font-size: 70px;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+
+/* Start Rwd */
+@media screen and (max-width: 400px) {
+    .landing{
+        max-width: 100%;
+    }
+    .landing-content h2{
+        font-size: 35px;
+    }
+}
+@media screen and (max-width: 200px) {
+    .landing{
+        max-width: 100%;
+    }
+    .landing-content h2{
+        font-size: 20px;
+    }
+    .landing-content p{
+        font-size: 15px;
+    }
+}
+/* End Rwd */
