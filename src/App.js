@@ -7,6 +7,7 @@ import Home from './pages/Home/Home';
 import menuPage from './pages/menuPage/menuPage';
 import Shop from './pages/Shop/Shop';
 import Contact from './pages/Contact/Contact';
+import Reservation from './pages/Reservation/Reservation';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path='/our-menu' element={<menuPage />}/>
         <Route path='/shop' element={<Shop />}/>
         <Route path='/contact' element={<Contact />}/>
+        <Route path='/reservation' element={<Reservation />}/>
       </Routes>
       <Arrowup/>
       <Footer />
