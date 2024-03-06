@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import './Header.css';
+import { Link } from 'react-router-dom';
 import { FaShoppingCart } from "react-icons/fa";
 import { CiMenuBurger } from "react-icons/ci";
 import { IoClose } from "react-icons/io5";
@@ -17,33 +18,33 @@ function Header() {
             </div>
             <ul className='header-list'>
                 <li>
-                    <a href='#' className='header-list-link'>HOME</a>
+                    <Link to='/' className='header-list-link'>HOME</Link>
                 </li>
                 <li>
-                    <a href='#' className='header-list-link'>OUR MENU</a>
+                    <Link to='/menupage' className='header-list-link'>OUR MENU</Link>
                 </li>
                 <li>
-                    <a href='#' className='header-list-link'>SHOP</a>
+                    <Link to='/shop' className='header-list-link'>SHOP</Link>
                 </li>
                 <li>
-                    <a href='#' className='header-list-link'>GALLERY</a>
+                    <Link to='/gallery' className='header-list-link'>GALLERY</Link>
                 </li>
                 <li>
-                    <a href='#' className='header-list-link'>OUR NEWS</a>
+                    <Link to='/news' className='header-list-link'>OUR NEWS</Link>
                 </li>
                 <li>
-                    <a href='#' className='header-list-link'>RESERVATION</a>
+                    <Link to='/reservation' className='header-list-link'>RESERVATION</Link>
                 </li>
                 <li>
-                    <a href='#' className='header-list-link'>CONTACT US</a>
+                    <Link to='/contact' className='header-list-link'>CONTACT US</Link>
                 </li>
                 <li>
-                    <a href='#' className='header-list-link cart-div'>
+                    <Link to='/cart' className='header-list-link cart-div'>
                         <FaShoppingCart className='cart-icon'/>
                         <div className='cart-length'>
                             <p>0</p>
                         </div>
-                    </a>
+                    </Link>
                 </li>
             </ul>
         </div>
@@ -59,37 +60,37 @@ function Header() {
               >
                 <div>
                   <IoClose className='close-icon' onClick={() => setModalIsOpen(false)}/>
-                  <ul className='header-modal-list'>
-                <li>
-                    <a href='#' className='header-list-link'>HOME</a>
+              <ul className='header-modal-list'>
+              <li>
+                    <Link to='/' className='header-list-link'>HOME</Link>
                 </li>
                 <li>
-                    <a href='#' className='header-list-link'>OUR MENU</a>
+                    <Link to='/ourmenu' className='header-list-link'>OUR MENU</Link>
                 </li>
                 <li>
-                    <a href='#' className='header-list-link'>SHOP</a>
+                    <Link to='/shop' className='header-list-link'>SHOP</Link>
                 </li>
                 <li>
-                    <a href='#' className='header-list-link'>GALLERY</a>
+                    <Link to='/gallery' className='header-list-link'>GALLERY</Link>
                 </li>
                 <li>
-                    <a href='#' className='header-list-link'>OUR NEWS</a>
+                    <Link to='/news' className='header-list-link'>OUR NEWS</Link>
                 </li>
                 <li>
-                    <a href='#' className='header-list-link'>RESERVATION</a>
+                    <Link to='/reservation' className='header-list-link'>RESERVATION</Link>
                 </li>
                 <li>
-                    <a href='#' className='header-list-link'>CONTACT US</a>
+                    <Link to='/contact' className='header-list-link'>CONTACT US</Link>
                 </li>
                 <li>
-                    <a href='#' className='header-list-link cart-div'>
+                    <Link to='/cart' className='header-list-link cart-div'>
                         <FaShoppingCart className='cart-icon'/>
                         <div className='cart-length'>
                             <p>0</p>
                         </div>
-                    </a>
+                    </Link>
                 </li>
-            </ul>
+              </ul>
                 </div>
             </Modal>
         </div>

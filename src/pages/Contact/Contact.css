@@ -1,0 +1,129 @@
+.contact{
+    max-width: 100%;
+}
+.contact-title{
+    width: 100%;
+    position: relative;
+    background-image: url(../../assets/header-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 500px;
+}
+.contact-title h3{
+    z-index: 99;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    font-weight: bold;
+}
+.contact-form{
+    padding: 0px 50px;
+}
+.contact-form-title{
+    text-align: center;
+    margin: 40px 0px;
+}
+.contact-form-title p{
+    color: #d1a054;
+}
+.contact-form-title h3{
+    font-weight: 300;
+    font-size: 40px;
+}
+.contact-form-inputs{
+    margin-top: 25px;
+    display: flex;
+    gap: 5%;
+    width: 100%;
+}
+.contact-input{
+    width: 30%;
+    height: 40px;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    outline: none;
+}
+.contact-input input{
+    width: 90%;
+    height: 100%;
+    margin: 0px 5%;
+    border: none;
+    outline: none;
+}
+.contact-input input:focus,
+.contact-form-textarea textarea:focus{
+    outline: none;
+}
+.contact-form-textarea{
+    width: 100%;
+    height: 150px;
+    margin: 25px 0px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    outline: none;
+}
+.contact-form-textarea textarea{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+}
+.contact-form button{
+    outline: none;
+    border: 1px solid #1b2024;
+    background-color: #1b2024;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: .5s ease;
+    font-weight: 200;
+    width: 30%;
+    height: 40px;
+    margin: 15px 35%;
+}
+.contact-form button:hover{
+    border: 1px solid #d1a054;
+    background-color: #d1a054;
+}
+.contact-form button:active{
+    transform: scale(0.8);
+}
+.contact-map{
+    max-width: 100%;
+    height: 500px;
+}
+.gmap_iframe{
+    width: 100%;
+    height: 100%;
+}
+
+/* Start Rwd */
+@media screen and (max-width: 990px) {
+    .contact{
+        max-width: 100%;
+    }
+    .contact-form{
+        padding: 0px 10px;
+    }
+    .contact-form-inputs{
+        margin-top: 25px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .contact-input{
+        width: 100%;
+        height: 40px;
+        border: 1px solid #ddd;
+        border-radius: 7px;
+        outline: none;
+        margin-top: 25px;
+    }
+}
+/* End Rwd */
