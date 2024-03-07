@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import './Header.css';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { FaShoppingCart } from "react-icons/fa";
 import { CiMenuBurger } from "react-icons/ci";
 import { IoClose } from "react-icons/io5";
@@ -21,7 +21,7 @@ function Header() {
                     <NavLink to='/' className='header-list-link'>HOME</NavLink>
                 </li>
                 <li>
-                    <NavLink to='/menupage' className='header-list-link'>OUR MENU</NavLink>
+                    <NavLink to='/menu' className='header-list-link'>OUR MENU</NavLink>
                 </li>
                 <li>
                     <NavLink to='/shop' className='header-list-link'>SHOP</NavLink>
@@ -65,7 +65,7 @@ function Header() {
                     <NavLink to='/' className='header-list-link'>HOME</NavLink>
                 </li>
                 <li>
-                    <NavLink to='/menupage' className='header-list-link'>OUR MENU</NavLink>
+                    <NavLink to='/menu' className='header-list-link'>OUR MENU</NavLink>
                 </li>
                 <li>
                     <NavLink to='/shop' className='header-list-link'>SHOP</NavLink>

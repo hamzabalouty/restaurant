@@ -1,0 +1,89 @@
+.menupage{
+    max-width: 100%;
+    z-index: 0;
+    padding-bottom: 50px;
+}
+.menupage-title h3{
+    z-index: 99;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    font-weight: bold;
+}
+.menupage-header{
+    text-align: center;
+    margin: 40px 0px;
+}
+.menupage-header h3{
+    font-weight: 300;
+    font-size: 40px;
+}
+.menupage-header p{
+    color: #d1a054;
+}
+.menupage-title,
+.menupage-dessert,
+.menupage-pizza,
+.menupage-salads,
+.menupage-soups{
+    width: 100%;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 500px;
+    z-index: 0;
+}
+.menupage-title{
+    background-image: url(../../assets/header-bg.jpg);
+}
+.menupage-dessert{
+    position: relative;
+    background-image: url(../../assets/category-desserts.jpg);
+}
+.menupage-pizza{
+    position: relative;
+    background-image: url(../../assets/category-pizza.jpg);
+}
+.menupage-salads{
+    position: relative;
+    background-image: url(../../assets/categorty-salads.jpg);
+}
+.menupage-soups{
+    position: relative;
+    background-image: url(../../assets/category-soups.jpg);
+}
+.menupage-item-content{
+    position: absolute;
+    background-color: #fff;
+    z-index: 1;
+    padding: 20px 30px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.menupage-item-content p{
+    margin-top: 15px;
+}
+
+/* Start Rwd */
+@media screen and (max-width: 400px) {
+    .menupage{
+        max-width: 100%;
+    }
+    .menupage-item-content{
+        width: 80%;
+    }
+    .menupage-item-content h4{
+        font-size: 17px;
+    }
+    .menupage-item-content p{
+        font-size: 14px;
+    }
+}
+/* End Rwd */
