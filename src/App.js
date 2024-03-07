@@ -9,6 +9,7 @@ import Shop from './pages/Shop/Shop';
 import Contact from './pages/Contact/Contact';
 import Reservation from './pages/Reservation/Reservation';
 import News from './pages/News/News';
+import Gallery from './pages/Gallery/Gallery';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path='/contact' element={<Contact />}/>
         <Route path='/news' element={<News />}/>
         <Route path='/reservation' element={<Reservation />}/>
+        <Route path='/gallery' element={<Gallery />}/>
       </Routes>
       <Arrowup/>
       <Footer />
