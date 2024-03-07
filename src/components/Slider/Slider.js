@@ -8,7 +8,6 @@ import Img1 from '../../assets/cat-2.jpg';
 import Img2 from '../../assets/cat-1.jpg';
 import Img3 from '../../assets/cat-4.jpg';
 import Img4 from '../../assets/cat-3.jpg';
-import Img5 from '../../assets/cat-5.jpg';
 
 const Slider = () => {
     return (
@@ -22,18 +21,16 @@ const Slider = () => {
                 className="mySwiper"
             >
             <SwiperSlide>
-                <div className='swiper-container'>
-                    <img src={Img1} alt='image'/>
-                    <img src={Img2} alt='image'/>
-                    <img src={Img3} alt='image'/>
-                </div>
+                <img className='slider-image' src={Img1} alt='image'/>
             </SwiperSlide>
             <SwiperSlide>
-               <div className='swiper-container'>
-                    <img src={Img2} alt='image'/>
-                    <img src={Img4} alt='image'/>
-                    <img src={Img5} alt='image'/>
-                </div>
+                <img className='slider-image' src={Img2} alt='image'/>
+            </SwiperSlide>
+            <SwiperSlide>
+                <img className='slider-image' src={Img3} alt='image'/>
+            </SwiperSlide>
+            <SwiperSlide>
+                <img className='slider-image' src={Img4} alt='image'/>
             </SwiperSlide>
           </Swiper>
         </div>

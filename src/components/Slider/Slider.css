@@ -25,10 +25,10 @@
   display: flex;
   gap: 5%;
 }
-.swiper-slide img {
+.slider-image {
   display: block;
-  width: 30%;
-  height: 100%;
+  width: 500px !important;
+  height: 500px !important;
 }
 
 /* Start Rwd */
