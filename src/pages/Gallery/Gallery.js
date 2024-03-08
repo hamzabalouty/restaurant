@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Gallery.css';
 import Img1 from '../../assets/image-1-370x247.jpg';
 import Img2 from '../../assets/image-2-370x247.jpg';
@@ -8,6 +8,11 @@ import Img5 from '../../assets/image-5-370x247.jpg';
 import Img6 from '../../assets/image-6-370x247.jpg';
 
 function Gallery() {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className='gallery'>
         <div className='gallery-title'>

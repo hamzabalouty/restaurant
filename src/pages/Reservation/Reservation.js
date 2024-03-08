@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Reservation.css';
 import { FaPhone, FaClock } from "react-icons/fa";
 import { IoLocation } from "react-icons/io5";
 
 function Reservation() {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className='reservation'>
         <div className='reservation-title'>

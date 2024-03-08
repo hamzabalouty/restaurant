@@ -37,15 +37,21 @@
     color: #d1a054;
 }
 .menu .menu-btn{
-    width: 20%;
+    /* width: 20%; */
     height: 40px;
     cursor: pointer;
     transition: .5s ease;
     border: 1px solid #d1a054;
     color: #d1a054;
-    background-color: #fff;
+    background-color: #fff ;
     border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    width: 20%;
     margin: 20px 40%;
+    text-decoration: none;
+    text-align: center;
+    padding-top: 5px;
 }
 .menu .menu-btn:hover{
     color: #fff;

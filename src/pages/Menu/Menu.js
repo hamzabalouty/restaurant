@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Menu.css';
 import Items from './Items';
 
 function Menu() {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className='menupage'>
       <div className='menupage-title'>

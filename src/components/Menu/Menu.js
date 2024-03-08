@@ -1,6 +1,8 @@
 import React from 'react';
 import './Menu.css';
+import { Link } from 'react-router-dom';
 import { menuData } from '../../data';
+import Item from '../../pages/Menu/Items';
 
 function Menu() {
   return (
@@ -10,20 +12,9 @@ function Menu() {
             <h3>FROM OUR MENU</h3>
         </div>
         <div className='menu-container'>
-          {menuData.map((item) => (
-            <div className='menu-box' key={item.id}>
-                <img src={item.img} alt='image'/>
-                <div className='menu-content'>
-                    <div className='menu-title'>
-                        <h5>{item.title}</h5>
-                        <p>${item.price}</p>
-                    </div>
-                    <p>{item.desc}</p>
-                </div>
-            </div>
-          ))}
+          <Item />
         </div>
-        <button className='menu-btn'>VIEW FULL MENU</button>
+        <Link to='/menu' className='menu-btn'>VIEW FULL MENU</Link>
     </div>
   )
 }
