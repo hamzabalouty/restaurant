@@ -1,0 +1,49 @@
+.shop{
+    max-width: 100%;
+    z-index: 0;
+}
+.shop-title{
+    width: 100%;
+    position: relative;
+    background-image: url(../../assets/header-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 500px;
+    z-index: 0;
+}
+.shop-title h3{
+    z-index: 99;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    font-weight: bold;
+}
+.shop-cat-btns{
+    margin: 100px 0px 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+.navlink-btn{
+    color: #1b2024;
+    text-decoration: none;
+    padding-bottom: 5px;
+    transition: .5s ease;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 990px) {
+    .shop{
+        max-width: 100%;
+    }
+    .shop-cat-btns{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}

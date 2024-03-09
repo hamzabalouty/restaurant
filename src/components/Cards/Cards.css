@@ -8,6 +8,7 @@
     padding: 0px 50px;
     margin: 30px 0px;
     display: flex;
+    flex-wrap: wrap;
     gap: 5%;
 }
 .card-box{
@@ -97,6 +98,18 @@
     .addtocart-card{
         width: 60%;
         margin: 0 20%;
+    }
+}
+@media screen and (max-width: 250px) {
+    .cards{
+        max-width: 100%;
+    }
+    .card-box{
+        width: 100%;
+    }
+    .addtocart-card{
+        width: 90%;
+        margin: 0 5%;
     }
 }
 /* End Rwd */
