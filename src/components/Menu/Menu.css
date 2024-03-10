@@ -2,6 +2,17 @@
     max-width: 100%;
     z-index: 0;
 }
+.slider-title{
+    text-align: center;
+    margin: 40px 0px;
+}
+.slider-title p{
+    color: #d1a054;
+}
+.slider-title h3{
+    font-weight: 300;
+    font-size: 40px;
+}
 .menu-container{
     display: flex;
     flex-wrap: wrap;
