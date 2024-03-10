@@ -16,6 +16,30 @@ import Img13 from './assets/pizza-9-370x247.jpg';
 import Img14 from './assets/product-2-370x247.jpg';
 
 
+export const cardsData = [
+    {
+        id: 1,
+        image: Img10,
+        title: 'Caeser Salad',
+        price: '30.00',
+        desc: 'Lettuce, Eggs, Parmesan Cheese, Chicken Breast Fillets.'
+    },
+    {
+        id: 2,
+        image: Img9,
+        title: 'Apple Strudel',
+        price: '15.00',
+        desc: 'Apples, Vanilla Ice Cream, Nuts'
+    },
+    {
+        id: 3,
+        image: Img7,
+        title: 'Cherry Pie',
+        price: '15.00',
+        desc: 'Cherries, Dough, White Sugar, Cheese, Vanilla Ice Cream'
+    }
+]
+
 export const menuData = [
     {
         id: 1,

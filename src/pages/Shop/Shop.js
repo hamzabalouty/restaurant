@@ -3,9 +3,15 @@ import './Shop.css';
 import { NavLink } from 'react-router-dom';
 import { shopData } from "../../data";
 import ReactPaginate from "react-paginate";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../rtk/slices/cart-slice";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 
 function Shop() {
+
+  const dispatch = useDispatch();
 
   const [users, setUsers] = useState(shopData.slice(0, 10));
   const [pageNumber, setPageNumber] = useState(0);
@@ -26,7 +32,8 @@ function Shop() {
             <div className='card-content'>
               <h4>{item.title}</h4>
               <p>{item.desc}</p>
-              <button className='addtocart-card'>Add To Cart</button>
+              <button onClick={() => dispatch(addToCart(item))} className='addtocart-card'>Add To Cart</button>
+              <ToastContainer />
             </div>
           </div>
       );

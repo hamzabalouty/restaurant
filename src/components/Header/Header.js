@@ -5,10 +5,13 @@ import { FaShoppingCart } from "react-icons/fa";
 import { CiMenuBurger } from "react-icons/ci";
 import { IoClose } from "react-icons/io5";
 import Modal from 'react-modal';
+import { useSelector } from "react-redux";
 
 function Header() {
 
   const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  const cart = useSelector((state) => state.cart);
 
   return (
     <div className='header'>
@@ -42,7 +45,7 @@ function Header() {
                     <NavLink to='/cart' className='header-list-link cart-div'>
                         <FaShoppingCart className='cart-icon'/>
                         <div className='cart-length'>
-                            <p>0</p>
+                            <p>{cart.length}</p>
                         </div>
                     </NavLink>
                 </li>
@@ -86,7 +89,7 @@ function Header() {
                     <NavLink to='/cart' className='header-list-link cart-div'>
                         <FaShoppingCart className='cart-icon'/>
                         <div className='cart-length'>
-                            <p>0</p>
+                            <p>{cart.length}</p>
                         </div>
                     </NavLink>
                 </li>
