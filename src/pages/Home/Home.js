@@ -14,9 +14,8 @@ function Home() {
   return (
     <>
       <Landing />
-      <Slider />
-      <Swiper />
       <Menu />
+      <Swiper />
       <Cards />
     </>
   )

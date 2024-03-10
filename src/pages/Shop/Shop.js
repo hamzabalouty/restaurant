@@ -2,39 +2,62 @@ import React, { useEffect, useState } from 'react';
 import './Shop.css';
 import { NavLink } from 'react-router-dom';
 import { shopData } from "../../data";
+import ReactPaginate from "react-paginate";
 
 
 function Shop() {
 
-  const [itemsData, setItemsData] = useState(shopData);
-  const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage, setPostsPerPage] = useState(8);
+  const [users, setUsers] = useState(shopData.slice(0, 10));
+  const [pageNumber, setPageNumber] = useState(0);
 
-  const lastPostIndex = currentPage * postsPerPage;
-  const firstPostIndex = lastPostIndex - postsPerPage;
-  const currentPosts = itemsData.slice(firstPostIndex, lastPostIndex);
+  const usersPerPage = 6;
+  const pagesVisited = pageNumber * usersPerPage;
 
-  //get all cat uniqe
-  const allCategory = [...new Set(shopData.map((i) => i.category))];
 
-  //filter by category
-  const filterbyCategory = (cat) => {
-    if (cat === "الكل") {
-      setItemsData(shopData);
-    } else {
-      const newArr = shopData.filter((item) => item.category === cat);
-      setItemsData(newArr);
-    }
+  const disproducts = users
+    .slice(pagesVisited, pagesVisited + usersPerPage)
+    .map((item) => {
+      return (
+        <div className='card-box' key={item.id}>
+            <img src={item.image} alt='image'/>
+            <div className='price-overlay'>
+              <p>${item.price}</p>
+            </div>
+            <div className='card-content'>
+              <h4>{item.title}</h4>
+              <p>{item.desc}</p>
+              <button className='addtocart-card'>Add To Cart</button>
+            </div>
+          </div>
+      );
+    });
+
+  const pageCount = Math.ceil(users.length / usersPerPage);
+
+  const changePage = ({ selected }) => {
+    setPageNumber(selected);
   };
 
-  //to filter by category
-  const onFilter = (cat) => {
-    filterbyCategory(cat);
-  };
-
+  
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+
+  const allCategory = [...new Set(shopData.map((i) => i.category))];
+
+  const filterbyCategory = (cat) => {
+    if (cat === "الكل") {
+      setUsers(shopData);
+    } else {
+      const newArr = shopData.filter((item) => item.category === cat);
+      setUsers(newArr);
+    }
+  };
+
+  const onFilter = (cat) => {
+    filterbyCategory(cat);
+  };
 
   return (
     <div className='shop'>
@@ -51,21 +74,18 @@ function Shop() {
         ))}
       </ul>
       <div className='cards-container'>
-        {currentPosts.map((item) => (
-          <div className='card-box' key={item.id}>
-            <img src={item.image} alt='image'/>
-            <div className='price-overlay'>
-              <p>${item.price}</p>
-            </div>
-            <div className='card-content'>
-              <h4>{item.title}</h4>
-              <p>{item.desc}</p>
-              <button className='addtocart-card'>Add To Cart</button>
-            </div>
-          </div>
-        ))}
-          
+        {disproducts}
       </div>
+      <ReactPaginate
+          previousLabel={"Previous"}
+          nextLabel={"Next"}
+          pageCount={pageCount}
+          onPageChange={changePage}
+          containerClassName={"paginationBttns"}
+          previousLinkClassName={"previousBttn"}
+          nextLinkClassName={"nextBttn"}
+          activeClassName={"paginationActive"}
+        />
     </div>
   )
 }

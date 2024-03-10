@@ -37,6 +37,33 @@
     transition: .5s ease;
     font-size: 20px;
 }
+.paginationBttns {
+    width: 50%;
+    height: 40px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 25%;
+}
+.paginationBttns a {
+    padding: 10px;
+    margin: 8px;
+    border-radius: 5px;
+    border: 1px solid #d1a054;
+    color: #d1a054;
+    cursor: pointer;
+    text-decoration: none;
+}
+.paginationBttns a:hover {
+    color: white;
+    background-color: #d1a054;
+}
+.paginationActive a {
+    color: white;
+    background-color: #d1a054;
+}
+
 
 @media screen and (max-width: 990px) {
     .shop{
@@ -45,5 +72,16 @@
     .shop-cat-btns{
         display: flex;
         flex-wrap: wrap;
+    }
+}
+@media screen and (max-width: 400px) {
+    .shop{
+        max-width: 100%;
+    }
+    .paginationBttns {
+        display: flex;
+        flex-direction: column;
+        height: 400px;
+        gap: 50px;
     }
 }
